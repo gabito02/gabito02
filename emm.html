@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Amor de Mi Vida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fdf5f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #e91e63;
+        }
+        .heart-line {
+            color: #e91e63;
+            font-size: 1.2rem;
+        }
+        input, button {
+            font-size: 1rem;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #e91e63;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #e91e63;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+        .result {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programa para Encontrar el Amor de Mi Vida</h1>
+    <p class="heart-line">&lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3</p>
+    <p>Ingresa un nombre:</p>
+    <input type="text" id="nameInput" placeholder="Escribe un nombre aquí">
+    <br>
+    <button onclick="findLove()">Comprobar</button>
+    <p class="result" id="result">Esperando a que escribas el nombre del amor de tu vida...</p>
+
+    <script>
+        // Función para encontrar el amor de mi vida
+        function findLove() {
+            const inputName = document.getElementById("nameInput").value.trim().toLowerCase();
+            const loveName = "eimi";
+            const result = document.getElementById("result");
+
+            if (inputName === loveName) {
+                result.textContent = `El amor de mi vida se llama ${inputName} <3. ¡Te quiero mucho, mi Emita!`;
+                result.style.color = "#e91e63";
+            } else if (inputName === "") {
+                result.textContent = "Por favor, escribe un nombre.";
+                result.style.color = "#333";
+            } else {
+                result.textContent = `${inputName} no es el amor de mi vida.`;
+                result.style.color = "#333";
+            }
+        }
+    </script>
+</body>
+</html>
